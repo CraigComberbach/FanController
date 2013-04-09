@@ -1,4 +1,35 @@
 #################
+## MPLAB X / NB
+#################
+
+build/
+dist/
+private/
+*local.*
+NMakefile
+
+#################
+## MPLAB 8
+#################
+
+*.o
+*.cof
+*.map
+*.mcs
+*.pre
+*.cPreview
+funclist
+startup.as
+startup.obj
+*.p1
+*.dep
+*.hxl
+*.lst
+*.rlf
+*.sdb
+*.sym
+
+#################
 ## Eclipse
 #################
 
