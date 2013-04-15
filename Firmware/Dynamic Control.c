@@ -17,27 +17,27 @@ void dynamic_control();
 
 void dynamic_control()
 {
-    unsigned char   loop;//Counts 0 to 15, for iterating over
-    unsigned int    temp1 = 0,//Stores the averaged/normailzed temperature values
-		    temp2 = 0;//Stores the averaged/normailzed temperature values
+	unsigned char loop; //Counts 0 to 15, for iterating over
+	unsigned int temp1 = 0, //Stores the averaged/normailzed temperature values
+			temp2 = 0; //Stores the averaged/normailzed temperature values
 
-    //Read and normalize temperature sensor 1
-    for(loop = 0; loop < 16; ++loop)
-	temp1 += partialTempTable[slow_A2D(CHANNEL_3) / 4];
+	//Read and normalize temperature sensor 1
+	for(loop = 0; loop < 16; ++loop)
+		temp1 += partialTempTable[slow_A2D(CHANNEL_3) / 4];
 
-    //Read and normalize temperature sensor 2
-    for(loop = 0; loop < 16; ++loop)
-	temp2 += partialTempTable[slow_A2D(CHANNEL_2) / 4];
+	//Read and normalize temperature sensor 2
+	for(loop = 0; loop < 16; ++loop)
+		temp2 += partialTempTable[slow_A2D(CHANNEL_2) / 4];
 
-    //Average the two temperatures
-    temp1 /= 16;
-    temp2 /= 16;
+	//Average the two temperatures
+	temp1 /= 16;
+	temp2 /= 16;
 
-    //Determine fan state
-    if(temp1 > (temp2 + OFFSET))
-	FAN = ON;
-    else
-	FAN = OFF;
+	//Determine fan state
+	if(temp1 > (temp2 + OFFSET))
+		FAN = ON;
+	else
+		FAN = OFF;
 
-    return;
+	return;
 }
