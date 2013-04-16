@@ -1,4 +1,12 @@
 #################
+## Altium
+#################
+
+*.SchDoc.zip
+*.PrjPCB.zip
+*.SchDocPreview
+
+#################
 ## MPLAB X / NB
 #################
 

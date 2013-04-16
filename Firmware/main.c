@@ -11,22 +11,11 @@ EEPROM		128 Bytes
  */
 #include "Initialize.h"
 #include "Dynamic Control.h"
-#include "pic.h"
-
-//Magic Numbers
-#define MAX_DELAY 26	//If used with WDT, it will delay for ~60 seconds (assuming 26)
-
+#include "p24F08KL200.h"
+ PIC24F08KL200
 int main()
 {
-	//Used to skip over a function to delay its activation
-	unsigned int delay = 0;
-
-	//Setup the chip to do what I want it to
-	if(++delay > MAX_DELAY)
-	{
-		initialize();
-		delay = 0;
-	}
+	initialize();
 
 	while(1)
 	{
@@ -37,7 +26,7 @@ int main()
 		dynamic_control();
 
 		//Go to sleep until WDT wake you every 2.304 seconds
-		//        SLEEP;
+		//SLEEP;
 	}
 	return 0;
 }

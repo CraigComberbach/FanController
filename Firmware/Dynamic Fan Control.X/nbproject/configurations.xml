@@ -36,12 +36,12 @@
     <conf name="default" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC12F675</targetDevice>
+        <targetDevice>PIC24F08KL200</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>RealICEPlatformTool</platformTool>
-        <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.12</languageToolchainVersion>
+        <languageToolchain>C30</languageToolchain>
+        <languageToolchainVersion>3_31</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
