@@ -3,6 +3,7 @@
 #################
 
 *.SchDoc.zip
+*.SchLib.zip
 *.PrjPCB.zip
 *.SchDocPreview
 
