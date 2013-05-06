@@ -6,6 +6,8 @@
 *.SchLib.zip
 *.PrjPCB.zip
 *.SchDocPreview
+*.PrjPCBStructure
+*.LOG
 
 #################
 ## MPLAB X / NB
