@@ -8,6 +8,7 @@
 *.SchDocPreview
 *.PrjPCBStructure
 *.LOG
+*.OutJob.Zip
 
 #################
 ## MPLAB X / NB
