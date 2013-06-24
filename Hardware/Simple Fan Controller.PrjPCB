@@ -174,10 +174,6 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[GeneratedDocument1]
-DocumentPath=Project Outputs for FC-PS4 REVA\BOM\Simple Fan Controller Rev A0 - BOM Rev A.xlsx
-DItemRevisionGUID=
-
 [SearchPath1]
 Path=C:\Program Files (x86)\Altium\AD 10\Libraries\Microchip\*.*
 IncludeSubFolders=1

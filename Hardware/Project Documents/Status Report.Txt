@@ -1,6 +1,6 @@
 Project Outputs Generation Report
 ---------------------------------
-Start Output Generation At 12:18:55 PM On 6/6/2013
+Start Output Generation At 12:10:24 PM On 6/11/2013
 
 Output: Simple Fan Controller Rev A0 - BOM Rev A
 Type  : BOM
@@ -11,4 +11,4 @@ From  : Project [Simple Fan Controller.PrjPCB]
 Files Generated   : 1
 Documents Printed : 0
 
-Finished Output Generation At 12:19:05 PM On 6/6/2013
+Finished Output Generation At 12:10:35 PM On 6/11/2013
