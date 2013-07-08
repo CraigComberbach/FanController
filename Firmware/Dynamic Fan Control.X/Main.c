@@ -6,17 +6,23 @@
  */
 
 #include <p24F08KL200.h>
-/*
- * 
- */
+
+//_FBS(BWRP_OFF & BSS_OFF)
+//_FGS(GWRP_OFF & GSS0_OFF)
+_FOSCSEL(FNOSC_FRCDIV)
+//_FOSC(POSCMD_NONE & OSCIOFNC_ON & POSCFREQ_MS & SOSCSEL_SOSCLP & FCKSM_CSDCMD)
+//_FWDT(WDTPS_PS32768 & FWDTEN_OFF & WINDIS_OFF)
+//_FPOR(BOREN_BOR0 & PWRTEN_ON & I2C1SEL_PRI & BORV_V30 & MCLRE_ON)
+_FICD(ICS_PGx2)
+
 int main()
 {
-	unsigned int loop;
 	TRISBbits.TRISB8 = 0;
+	LATBbits.LATB8 = 0;
 	while(1)
 	{
-		for(loop = 0; loop < 60000; loop++)
-			LATBbits.LATB8 ^= 1;
+		LATBbits.LATB8 ^= 1;
 	}
+
 	return;
 }
