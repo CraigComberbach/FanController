@@ -1,15 +1,13 @@
 /**************************************************************************************************
 Authours:				Craig Comberbach
-Target Hardware:		PIC24F08KL200
-Chip resources used:	Indirectly all of them
-Code assumptions:		Evil Genius only
-Purpose:				Measure two temperature sensors and trigger a latching relay to be either on or off, which in turn will control a fan. The project is
-						battery powered and will spend most of it's time in sleep mode, waiting to take another sample and/or toggle the fan.
+Target Hardware:		PIC
+Chip resources used:
+Code assumptions:
+Purpose:
 
 Version History:
 v0.01	2013-07-11  Craig Comberbach
 	Compiler: C30 v3.31		IDE: MPLABx 1.80	Tool: RealICE	Computer: Intel Xeon CPU 3.07 GHz, 6 GB RAM, Windows 7 64 bit Professional SP1
-	Blinks an LED
 	First version
 **************************************************************************************************/
 /*************    Header Files    ***************/
@@ -23,25 +21,36 @@ v0.01	2013-07-11  Craig Comberbach
 /*************  Global Variables  ***************/
 /*************Function  Prototypes***************/
 /************* Device Definitions ***************/
-//_FBS(BWRP_OFF & BSS_OFF)
-//_FGS(GWRP_OFF & GSS0_OFF)
-_FOSCSEL(FNOSC_FRCDIV)
-//_FOSC(POSCMD_NONE & OSCIOFNC_ON & POSCFREQ_MS & SOSCSEL_SOSCLP & FCKSM_CSDCMD)
-//_FWDT(WDTPS_PS32768 & FWDTEN_OFF & WINDIS_OFF)
-//_FPOR(BOREN_BOR0 & PWRTEN_ON & I2C1SEL_PRI & BORV_V30 & MCLRE_ON)
-_FICD(ICS_PGx2)
-
 /************* Module Definitions ***************/
 /************* Other  Definitions ***************/
 
-int main()
+void Intialize(void)
 {
-	//Initialize pins, modules, etc
-	Initialize();
+	//Setup default ouput values (before turning it into an output
+	LATAbits.LATA0
+	LATAbits.LATA1
+	LATAbits.LATA2
+	LATAbits.LATA3
+	LATAbits.LATA4
+	LATAbits.LATA6
+	LATBbits.LATB4
+	LATBbits.LATB8
+	LATBbits.LATB9
+	LATBbits.LATB14
+	LATBbits.LATB15
 
-	while(1)
-	{
-	}
+	//Setup pin IO
+	TRISAbits.TRISA0
+	TRISAbits.TRISA1
+	TRISAbits.TRISA2
+	TRISAbits.TRISA3
+	TRISAbits.TRISA4
+	TRISAbits.TRISA6
+	TRISBbits.TRISB4
+	TRISBbits.TRISB8
+	TRISBbits.TRISB9
+	TRISBbits.TRISB14
+	TRISBbits.TRISB15
 
-	return;
+	//Setup Modules
 }
