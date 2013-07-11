@@ -1,12 +1,27 @@
-/* 
- * File:   Main.c
- * Author: craigc
- *
- * Created on June 17, 2013, 12:29 PM
- */
+/**************************************************************************************************
+Authours:				Craig Comberbach
+Target Hardware:		PIC24F08KL200
+Chip resources used:	Indirectly all of them
+Code assumptions:		Evil Genius only
+Purpose:				Measure two temperature sensors and trigger a latching relay to be either on or off, which in turn will control a fan. The project is
+						battery powered and will spend most of it's time in sleep mode, waiting to take another sample and/or toggle the fan.
 
+Version History:
+v0.01	2013-07-11  Craig Comberbach
+	Compiler: C30 v3.31		IDE: MPLABx 1.80	Tool: RealICE	Computer: Intel Xeon CPU 3.07 GHz, 6 GB RAM, Windows 7 64 bit Professional SP1
+	Blinks an LED
+	First version
+**************************************************************************************************/
+/*************    Header Files    ***************/
 #include <p24F08KL200.h>
+#include "Controller Setup.h"
 
+/************Arbitrary Functionality*************/
+/*************   Magic  Numbers   ***************/
+/***********State Machine Definitions*************/
+/*************  Global Variables  ***************/
+/*************Function  Prototypes***************/
+/************* Device Definitions ***************/
 //_FBS(BWRP_OFF & BSS_OFF)
 //_FGS(GWRP_OFF & GSS0_OFF)
 _FOSCSEL(FNOSC_FRCDIV)
@@ -15,12 +30,17 @@ _FOSCSEL(FNOSC_FRCDIV)
 //_FPOR(BOREN_BOR0 & PWRTEN_ON & I2C1SEL_PRI & BORV_V30 & MCLRE_ON)
 _FICD(ICS_PGx2)
 
+/************* Module Definitions ***************/
+/************* Other  Definitions ***************/
+
 int main()
 {
+	unsigned int loop;
 	TRISBbits.TRISB8 = 0;
 	LATBbits.LATB8 = 0;
 	while(1)
 	{
+		for(loop = 0; loop < 60000; loop++);
 		LATBbits.LATB8 ^= 1;
 	}
 
