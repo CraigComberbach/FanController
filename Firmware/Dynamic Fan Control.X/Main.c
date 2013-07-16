@@ -16,6 +16,7 @@ v0.01	2013-07-11  Craig Comberbach
 #include <p24F08KL200.h>
 #include "Controller Setup.h"
 #include "Initialize.h"
+#include "A2D.h"
 
 /************Arbitrary Functionality*************/
 /*************   Magic  Numbers   ***************/
@@ -37,10 +38,13 @@ _FICD(ICS_PGx2)
 int main()
 {
 	//Initialize pins, modules, etc
-	Initialize();
+	Initialize_Microchip();
 
 	while(1)
 	{
+		A2D_Routine();
+
+		//TODO - Main Loop Wheel Spin
 	}
 
 	return;

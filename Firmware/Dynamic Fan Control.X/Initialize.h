@@ -1,7 +1,7 @@
 #ifndef INITIALIZE_H
 #define	INITIALIZE_H
 
-void Intialize(void);
+void Initialize_Microchip(void);
 
 #endif	/* INITIALIZE_H */
 
