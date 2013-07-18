@@ -78,6 +78,15 @@ void Initialize_Microchip(void)
 void Initialize_TMR1(void)
 {
 	//TODO - Write TMR1 Initialize
+	//Timer1 Control Register
+	T1CONbits.TCS	= 0;//0 = Internal clock (FOSC/2)
+//	T1CONbits.TSYNC	= Not used because TCS = 0
+	T1CONbits.TCKPS	= ;//
+//TODO - What is gated Time Accumulation?	T1CONbits.TGATE	= 0;//0 = Gated time accumulation is disabled
+//	T1CONbits.T1ECS	= Not valid because TCS = 0
+	T1CONbits.TSIDL	= 0;//0= Continue module operation in Idle mode
+	T1CONbits.TON	= 1;//1 = Starts 16-bit Timer1
+
 	return;
 }
 
