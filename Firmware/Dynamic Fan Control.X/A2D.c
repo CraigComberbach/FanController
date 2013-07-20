@@ -6,7 +6,7 @@ Code assumptions:
 Purpose:				Read the Thermistor inputs
 
 Version History:
-v0.01	Y-M-D  Craig Comberbach
+v0.0.0	2013-07-18  Craig Comberbach
 	Compiler: C30 v3.31	IDE: MPLABx 1.80	Tool: RealICE	Computer: Intel Xeon CPU 3.07 GHz, 6 GB RAM, Windows 7 64 bit Professional SP1
 	First version
 **************************************************************************************************/
@@ -14,6 +14,7 @@ v0.01	Y-M-D  Craig Comberbach
 #include <p24F08KL200.h>
 #include "Controller Setup.h"
 
+/************* Semantic Versioning***************/
 /************Arbitrary Functionality*************/
 /*************   Magic  Numbers   ***************/
 /*************    Enumeration     ***************/
