@@ -13,8 +13,7 @@ v0.0.0	2013-07-11  Craig Comberbach
 	First version
 **************************************************************************************************/
 /*************    Header Files    ***************/
-#include <p24F08KL200.h>
-#include "Controller Setup.h"
+#include "Project Setup.h"
 #include "Initialize.h"
 #include "A2D.h"
 

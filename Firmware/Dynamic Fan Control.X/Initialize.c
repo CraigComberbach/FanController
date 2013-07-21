@@ -11,8 +11,7 @@ v0.0.0	2013-07-11  Craig Comberbach
 	First version
 **************************************************************************************************/
 /*************    Header Files    ***************/
-#include <p24F08KL200.h>
-#include "Controller Setup.h"
+#include "Project Setup.h"
 #include "Initialize.h"
 #include "A2D.h"
 #include "Pins.h"
@@ -22,7 +21,7 @@ v0.0.0	2013-07-11  Craig Comberbach
 //This code reqires Pins.c to fulfil it's roll
 #if PINS_MAJOR != 0
 	#warning "Pins has Major has changed"
-#elif PINS_MINOR != 0
+#elif PINS_MINOR != 1
 	#warning "Pins.c has new features that this code may benefit from"
 #elif PINS_PATCH != 0
 	#warning "Pins.c has had a bug fix, you should check to see that we weren't relying on a bug for functionality"
@@ -48,11 +47,6 @@ v0.0.0	2013-07-11  Craig Comberbach
 
 /************Arbitrary Functionality*************/
 /*************   Magic  Numbers   ***************/
-#define LOW		0
-#define HIGH	1
-#define INPUT	1
-#define OUTPUT	0
-
 /***********State Machine Definitions*************/
 /*************  Global Variables  ***************/
 /*************Function  Prototypes***************/
@@ -63,6 +57,7 @@ v0.0.0	2013-07-11  Craig Comberbach
 void Initialize_Microchip(void)
 {
 	//Setup default ouput values (before turning it into an output, or...)
+	Initialize_Pin(ra0, LOW, PUSH_PULL, INPUT);
 	LATAbits.LATA0 = LOW;
 	LATAbits.LATA1 = LOW;
 	LATAbits.LATA2 = LOW;

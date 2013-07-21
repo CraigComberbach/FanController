@@ -11,8 +11,7 @@ v0.0.0	2013-07-20  Craig Comberbach
 	First version
 **************************************************************************************************/
 /*************    Header Files    ***************/
-#include <p24F08KL200.h>
-#include "Controller Setup.h"
+#include "Project Setup.h"
 
 /************* Semantic Versioning***************/
 /************Arbitrary Functionality*************/

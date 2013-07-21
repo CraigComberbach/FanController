@@ -13,8 +13,8 @@ ifeq "${IGNORE_LOCAL}" "TRUE"
 else
 include Makefile
 # Include makefile containing local settings
-ifeq "$(wildcard nbproject/Makefile-local-default.mk)" "nbproject/Makefile-local-default.mk"
-include nbproject/Makefile-local-default.mk
+ifeq "$(wildcard nbproject/Makefile-local-Default.mk)" "nbproject/Makefile-local-Default.mk"
+include nbproject/Makefile-local-Default.mk
 endif
 endif
 
@@ -25,7 +25,7 @@ MV=mv
 CP=cp 
 
 # Macros
-CND_CONF=default
+CND_CONF=Default
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=elf
@@ -66,7 +66,7 @@ LDLIBSOPTIONS=
 FIXDEPS=fixDeps
 
 .build-conf:  ${BUILD_SUBPROJECTS}
-	${MAKE} ${MAKE_OPTIONS} -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE} ${MAKE_OPTIONS} -f nbproject/Makefile-Default.mk dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 MP_PROCESSOR_OPTION=24F08KL200
 MP_LINKER_FILE_OPTION=,--script=p24F08KL200.gld
@@ -173,8 +173,8 @@ endif
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
-	${RM} -r build/default
-	${RM} -r dist/default
+	${RM} -r build/Default
+	${RM} -r dist/Default
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl

@@ -3,7 +3,7 @@
   <projectmakefile>Makefile</projectmakefile>
   <defaultConf>0</defaultConf>
   <confs>
-    <conf name="default" type="2">
+    <conf name="Default" type="2">
       <platformToolSN>:=MPLABCommUSB:=04D8:=9009:=0100:=Microchip Technology, Inc. (www.microchip.com):=MPLAB ICD3 tm (www.microchip.com):=JIT104139153:=x:=en</platformToolSN>
       <languageToolchainDir>C:\Program Files (x86)\Microchip\xc16\v1.11\bin</languageToolchainDir>
       <mdbdebugger version="1">

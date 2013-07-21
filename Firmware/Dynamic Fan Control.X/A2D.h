@@ -5,8 +5,11 @@
 #define A2D_MAJOR	0
 #define A2D_MINOR	0
 #define A2D_PATCH	0
-/************************************************/
 
+/*************   Magic  Numbers   ***************/
+/*************    Enumeration     ***************/
+/***********State Machine Definitions************/
+/*************Function  Prototypes***************/
 void Initialize_A2D(void);
 void A2D_Routine(void);
 
