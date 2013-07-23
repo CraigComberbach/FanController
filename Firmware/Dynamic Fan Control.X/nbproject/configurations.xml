@@ -5,10 +5,10 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Initialize.h</itemPath>
-      <itemPath>A2D.h</itemPath>
-      <itemPath>Pins.h</itemPath>
-      <itemPath>Timers.h</itemPath>
       <itemPath>Project Setup.h</itemPath>
+      <itemPath>C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware/A2D.h</itemPath>
+      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Pins.h</itemPath>
+      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Timers.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -19,9 +19,9 @@
                    projectFiles="true">
       <itemPath>Main.c</itemPath>
       <itemPath>Initialize.c</itemPath>
-      <itemPath>A2D.c</itemPath>
-      <itemPath>Pins.c</itemPath>
-      <itemPath>Timers.c</itemPath>
+      <itemPath>C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware/A2D.c</itemPath>
+      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Pins.c</itemPath>
+      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Timers.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -29,6 +29,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../../../Generic-Embedded-Peripherals/Firmware</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Default" type="2">
@@ -37,7 +40,7 @@
         <targetDevice>PIC24F08KL200</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>ICD3PlatformTool</platformTool>
+        <platformTool>RealICEPlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>1.11</languageToolchainVersion>
         <platform>3</platform>
@@ -75,7 +78,8 @@
         <property key="enable-short-double" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="C:\Users\craigc\Dropbox\Local Code\Generic-Embedded-Peripherals\Firmware;C:\Users\craigc\Dropbox\Local Code\FanController\Firmware\Dynamic Fan Control.X"/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>
@@ -129,7 +133,8 @@
         <property key="enable-default-isr" value="true"/>
         <property key="enable-handles" value="true"/>
         <property key="enable-pack-data" value="true"/>
-        <property key="extra-lib-directories" value=""/>
+        <property key="extra-lib-directories"
+                  value="C:\Users\craigc\Dropbox\Local Code\Generic-Embedded-Peripherals"/>
         <property key="general-code-protect" value="no_code_protect"/>
         <property key="general-write-protect" value="no_write_protect"/>
         <property key="generate-cross-reference-file" value="false"/>
@@ -163,8 +168,8 @@
         <property key="output-file-format" value="elf"/>
         <property key="save-temps" value="false"/>
       </C30Global>
-      <ICD3PlatformTool>
-      </ICD3PlatformTool>
+      <RealICEPlatformTool>
+      </RealICEPlatformTool>
     </conf>
   </confs>
 </configurationDescriptor>

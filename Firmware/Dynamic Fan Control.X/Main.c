@@ -18,7 +18,7 @@ v0.0.0	2013-07-11  Craig Comberbach
 #include "A2D.h"
 
 /************* Semantic Versioning***************/
-//This code requires Initialize.c to fulfil it's roll
+//This code requires Initialize.c to fulfill it's roll
 #if INITIALIZE_MAJOR != 0
 	#warning "Initialize.c has Major has changed"
 #elif INITIALIZE_MINOR != 0
@@ -27,7 +27,7 @@ v0.0.0	2013-07-11  Craig Comberbach
 	#warning "Initialize.c has had a bug fix, you should check to see that we weren't relying on a bug for functionality"
 #endif
 
-//This code requires A2D.c to fulfil it's roll
+//This code requires A2D.c to fulfill it's roll
 #if A2D_MAJOR != 0
 	#warning "A2D.c has Major has changed"
 #elif A2D_MINOR != 0
@@ -60,7 +60,7 @@ int main()
 
 	while(1)
 	{
-		A2D_Routine();
+//		A2D_Routine();
 
 		//TODO - Main Loop Wheel Spin
 	}
