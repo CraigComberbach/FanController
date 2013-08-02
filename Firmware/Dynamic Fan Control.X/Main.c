@@ -7,14 +7,34 @@ Purpose:				Measure two temperature sensors and trigger a latching relay to be e
 						battery powered and will spend most of it's time in sleep mode, waiting to take another sample and/or toggle the fan.
 
 Version History:
-v0.01	2013-07-11  Craig Comberbach
+v0.0.0	2013-07-11  Craig Comberbach
 	Compiler: C30 v3.31		IDE: MPLABx 1.80	Tool: RealICE	Computer: Intel Xeon CPU 3.07 GHz, 6 GB RAM, Windows 7 64 bit Professional SP1
 	Blinks an LED
 	First version
 **************************************************************************************************/
 /*************    Header Files    ***************/
-#include <p24F08KL200.h>
-#include "Controller Setup.h"
+#include "Project Setup.h"
+#include "Initialize.h"
+#include "A2D.h"
+
+/************* Semantic Versioning***************/
+//This code requires Initialize.c to fulfill it's roll
+#if INITIALIZE_MAJOR != 0
+	#warning "Initialize.c has Major has changed"
+#elif INITIALIZE_MINOR != 0
+	#warning "Initialize.c has new features that this code may benefit from"
+#elif INITIALIZE_PATCH != 0
+	#warning "Initialize.c has had a bug fix, you should check to see that we weren't relying on a bug for functionality"
+#endif
+
+//This code requires A2D.c to fulfill it's roll
+#if A2D_MAJOR != 0
+	#warning "A2D.c has Major has changed"
+#elif A2D_MINOR != 0
+	#warning "A2D.c has new features that this code may benefit from"
+#elif A2D_PATCH != 0
+	#warning "A2D.c has had a bug fix, you should check to see that we weren't relying on a bug for functionality"
+#endif
 
 /************Arbitrary Functionality*************/
 /*************   Magic  Numbers   ***************/
@@ -35,13 +55,14 @@ _FICD(ICS_PGx2)
 
 int main()
 {
-	unsigned int loop;
-	TRISBbits.TRISB8 = 0;
-	LATBbits.LATB8 = 0;
+	//Initialize pins, modules, etc
+	Initialize_Microchip();
+
 	while(1)
 	{
-		for(loop = 0; loop < 60000; loop++);
-		LATBbits.LATB8 ^= 1;
+//		A2D_Routine();
+
+		//TODO - Main Loop Wheel Spin
 	}
 
 	return;
