@@ -56,32 +56,18 @@ v0.0.0	2013-07-11  Craig Comberbach
 
 void Initialize_Microchip(void)
 {
-	//Setup default ouput values (before turning it into an output, or...)
+	//Setup individual pins
 	Initialize_Pin(ra0, LOW, PUSH_PULL, INPUT);
-	LATAbits.LATA0 = LOW;
-	LATAbits.LATA1 = LOW;
-	LATAbits.LATA2 = LOW;
-	LATAbits.LATA3 = LOW;
-	LATAbits.LATA4 = LOW;
-	LATAbits.LATA6 = LOW;
-	LATBbits.LATB4 = LOW;
-	LATBbits.LATB8 = LOW;
-	LATBbits.LATB9 = LOW;
-	LATBbits.LATB14 = LOW;
-	LATBbits.LATB15 = LOW;
-
-	//Setup pin IO
-	TRISAbits.TRISA0 = INPUT;
-	TRISAbits.TRISA1 = INPUT;
-	TRISAbits.TRISA2 = INPUT;
-	TRISAbits.TRISA3 = INPUT;
-	TRISAbits.TRISA4 = OUTPUT;
-	TRISAbits.TRISA6 = OUTPUT;
-	TRISBbits.TRISB4 = OUTPUT;
-	TRISBbits.TRISB8 = INPUT;
-	TRISBbits.TRISB9 = INPUT;
-	TRISBbits.TRISB14 = INPUT;
-	TRISBbits.TRISB15 = INPUT;
+	Initialize_Pin(ra1, LOW, PUSH_PULL, INPUT);
+	Initialize_Pin(ra2, LOW, PUSH_PULL, INPUT);
+	Initialize_Pin(ra3, LOW, PUSH_PULL, INPUT);
+	Initialize_Pin(ra4, LOW, PUSH_PULL, OUTPUT);
+	Initialize_Pin(ra6, LOW, PUSH_PULL, OUTPUT);
+	Initialize_Pin(rb4, LOW, PUSH_PULL, OUTPUT);
+	Initialize_Pin(rb8, LOW, PUSH_PULL, INPUT);
+	Initialize_Pin(rb9, LOW, PUSH_PULL, INPUT);
+	Initialize_Pin(rb14, LOW, PUSH_PULL, INPUT);
+	Initialize_Pin(rb15, LOW, PUSH_PULL, INPUT);
 
 	//Setup Timers
 	Initialize_TMR1();
