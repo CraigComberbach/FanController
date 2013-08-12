@@ -39,7 +39,7 @@ v0.0.0	2013-07-11  Craig Comberbach
 //This code requires Timers.c to fulfil it's roll
 #if TIMERS_MAJOR != 0
 	#warning "Timer.c has Major has changed"
-#elif TIMERS_MINOR != 0
+#elif TIMERS_MINOR != 2
 	#warning "Timer.c has new features that this code may benefit from"
 #elif TIMERS_PATCH != 0
 	#warning "Timer.c has had a bug fix, you should check to see that we weren't relying on a bug for functionality"
@@ -70,10 +70,9 @@ void Initialize_Microchip(void)
 	Initialize_Pin(rb15, LOW, PUSH_PULL, INPUT);
 
 	//Setup Timers
-	Initialize_TMR1();
-	Initialize_TMR2();
-	Initialize_TMR3();
-	Initialize_TMR4();
+//	Initialize_TMR1();
+	Initialize_TMR2(1, MILLI_SECONDS, NO_TIMER_INTERRUPT);	//Setup to operate as a 1mS timer for main loop regulation
+//	Initialize_TMR3();
 
 	//Setup Modules
 	Initialize_A2D();
