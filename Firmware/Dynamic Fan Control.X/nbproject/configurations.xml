@@ -9,6 +9,7 @@
       <itemPath>../../../Generic-Embedded-Peripherals/Firmware/A2D.h</itemPath>
       <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Pins.h</itemPath>
       <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Timers.h</itemPath>
+      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/I2C.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -22,6 +23,7 @@
       <itemPath>Main.c</itemPath>
       <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Pins.c</itemPath>
       <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Timers.c</itemPath>
+      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/I2C.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -29,6 +31,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../../../Generic-Embedded-Peripherals/Firmware</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -37,7 +42,7 @@
         <targetDevice>PIC24F08KL200</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>ICD3PlatformTool</platformTool>
+        <platformTool>RealICEPlatformTool</platformTool>
         <languageToolchain>C30</languageToolchain>
         <languageToolchainVersion>3_31</languageToolchainVersion>
         <platform>3</platform>
@@ -76,7 +81,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="extra-include-directories"
-                  value="C:\Users\Craig\Dropbox\Local Code\FanController\Firmware\Dynamic Fan Control.X;C:\Users\Craig\Dropbox\Local Code\Generic-Embedded-Peripherals\Firmware"/>
+                  value="C:\Users\craigc\Dropbox\Local Code\FanController\Firmware\Dynamic Fan Control.X;C:\Users\craigc\Dropbox\Local Code\Generic-Embedded-Peripherals\Firmware"/>
         <property key="isolate-each-function" value="false"/>
         <property key="optimization-level" value="0"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -90,8 +95,8 @@
       </C30-LD>
       <C30Global>
       </C30Global>
-      <ICD3PlatformTool>
-      </ICD3PlatformTool>
+      <RealICEPlatformTool>
+      </RealICEPlatformTool>
     </conf>
   </confs>
 </configurationDescriptor>

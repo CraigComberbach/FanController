@@ -12,6 +12,9 @@ v0.0.0	2013-07-11  Craig Comberbach
 	Blinks an LED
 	First version
 **************************************************************************************************/
+
+#include "Timers.h"
+
 /*************    Header Files    ***************/
 #include "Project Setup.h"
 #include "Initialize.h"
@@ -34,6 +37,15 @@ v0.0.0	2013-07-11  Craig Comberbach
 	#warning "A2D.c has new features that this code may benefit from"
 #elif A2D_PATCH != 0
 	#warning "A2D.c has had a bug fix, you should check to see that we weren't relying on a bug for functionality"
+#endif
+
+//This code requires Timers.c to fulfil it's roll
+#if TIMERS_MAJOR != 0
+	#warning "Timer.c has Major has changed"
+#elif TIMERS_MINOR != 3
+	#warning "Timer.c has new features that this code may benefit from"
+#elif TIMERS_PATCH != 0
+	#warning "Timer.c has had a bug fix, you should check to see that we weren't relying on a bug for functionality"
 #endif
 
 /************Arbitrary Functionality*************/
@@ -62,7 +74,8 @@ int main()
 	{
 //		A2D_Routine();
 
-		//TODO - Main Loop Wheel Spin
+		//Main loop timing
+		while(Current_Timer(MAIN_LOOP, MICRO_SECONDS) < 1/*mS*/);
 	}
 
 	return;

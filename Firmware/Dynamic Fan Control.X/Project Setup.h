@@ -7,10 +7,15 @@
 //Clock Frequency
 #define FOSC_HZ	8000000	//8MHz
 
+//Timers
+#define UNUSED_TMR1	TIMER1
+#define MAIN_LOOP	TIMER2
+#define UNUSED_TMR3	TIMER3
+
 //I2C Modules
-#define I2C1	1
-#define I2C2	2
-#define I2C3	3
+#define I2C_1	1
+#define I2C_2	2
+#define I2C_3	3
 
 //SPI Modules
 #define SPI1	1
