@@ -39,11 +39,3 @@
 #define OC8		8
 
 #endif	/* PROJECT_SETUP_H */
-<<<<<<< HEAD
-
-//This should be in every file
-#if defined FAN_CONTROLLER
-	#include <p24F08KL200.h>
-#endif
-=======
->>>>>>> origin/Master
