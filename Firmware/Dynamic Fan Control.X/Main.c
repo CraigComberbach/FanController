@@ -60,7 +60,7 @@ int main()
 
 	while(1)
 	{
-//		A2D_Routine();
+	A2D_Routine();
 
 		//TODO - Main Loop Wheel Spin
 	}

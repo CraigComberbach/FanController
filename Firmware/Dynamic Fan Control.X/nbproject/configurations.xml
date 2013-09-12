@@ -6,9 +6,9 @@
                    projectFiles="true">
       <itemPath>Initialize.h</itemPath>
       <itemPath>Project Setup.h</itemPath>
-      <itemPath>C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware/A2D.h</itemPath>
       <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Pins.h</itemPath>
       <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Timers.h</itemPath>
+      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/A2D.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -19,9 +19,9 @@
                    projectFiles="true">
       <itemPath>Main.c</itemPath>
       <itemPath>Initialize.c</itemPath>
-      <itemPath>C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware/A2D.c</itemPath>
       <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Pins.c</itemPath>
       <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Timers.c</itemPath>
+      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/A2D.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -79,7 +79,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="extra-include-directories"
-                  value="C:\Users\jasons\Desktop\The Git\FanController\Firmware\Dynamic Fan Control.X;C:\Users\jasons\Desktop\The Git\FanController\Hardware;C:\Users\craigc\Dropbox\Local Code\Generic-Embedded-Peripherals\Firmware;C:\Users\craigc\Dropbox\Local Code\FanController\Firmware\Dynamic Fan Control.X"/>
+                  value="C:\Users\jasons\Desktop\The Git\FanController\Firmware\Dynamic Fan Control.X;C:\Users\jasons\Desktop\The Git\Generic-Embedded-Peripherals\Firmware"/>
         <property key="isolate-each-function" value="false"/>
         <property key="optimization-level" value="0"/>
         <property key="post-instruction-scheduling" value="default"/>
