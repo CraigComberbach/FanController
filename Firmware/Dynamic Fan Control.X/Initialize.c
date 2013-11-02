@@ -11,7 +11,7 @@ v0.0.0	2013-07-11  Craig Comberbach
 	First version
 **************************************************************************************************/
 /*************    Header Files    ***************/
-#include "Project Setup.h"
+#include "Config.h"
 #include "Initialize.h"
 #include "A2D.h"
 #include "Pins.h"
@@ -19,7 +19,9 @@ v0.0.0	2013-07-11  Craig Comberbach
 
 /************* Semantic Versioning***************/
 //This code reqires Pins.c to fulfil it's roll
-#if PINS_MAJOR != 0
+#ifndef PINS_LIBRARY
+	#error "You need to include the Pins library for this code to compile"
+#elif PINS_MAJOR != 0
 	#warning "Pins has Major has changed"
 #elif PINS_MINOR != 1
 	#warning "Pins.c has new features that this code may benefit from"
@@ -28,7 +30,9 @@ v0.0.0	2013-07-11  Craig Comberbach
 #endif
 
 //This code requires A2D.c to fulfil it's roll
-#if A2D_MAJOR != 0
+#ifndef A2D_LIBRARY
+	#error "You need to include the A2D library for this code to compile"
+#elif A2D_MAJOR != 0
 	#warning "A2D.c has Major has changed"
 #elif A2D_MINOR != 0
 	#warning "A2D.c has new features that this code may benefit from"
@@ -37,7 +41,9 @@ v0.0.0	2013-07-11  Craig Comberbach
 #endif
 
 //This code requires Timers.c to fulfil it's roll
-#if TIMERS_MAJOR != 0
+#ifndef TIMERS_LIBRARY
+	#error "You need to include the Timers library for this code to compile"
+#elif TIMERS_MAJOR != 0
 	#warning "Timer.c has Major has changed"
 #elif TIMERS_MINOR != 3
 	#warning "Timer.c has new features that this code may benefit from"

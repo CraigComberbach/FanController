@@ -2,9 +2,9 @@
 #define	INITIALIZE_H
 
 /************* Semantic Versioning***************/
-#define INITIALIZE_MAJOR	0
-#define INITIALIZE_MINOR	0
-#define INITIALIZE_PATCH	0
+//#define INITIALIZE_MAJOR	0
+//#define INITIALIZE_MINOR	0
+//#define INITIALIZE_PATCH	0
 
 /*************   Magic  Numbers   ***************/
 /*************    Enumeration     ***************/

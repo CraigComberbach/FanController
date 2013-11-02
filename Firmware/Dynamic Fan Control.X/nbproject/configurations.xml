@@ -5,11 +5,11 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Initialize.h</itemPath>
-      <itemPath>Project Setup.h</itemPath>
-      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/A2D.h</itemPath>
-      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Pins.h</itemPath>
-      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Timers.h</itemPath>
-      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/I2C.h</itemPath>
+      <itemPath>../../../Personal Libraries/Timers/Firmware/Timers.h</itemPath>
+      <itemPath>../../../Personal Libraries/A2D/A2D.h</itemPath>
+      <itemPath>../../../Personal Libraries/I2C/I2C.h</itemPath>
+      <itemPath>../../../Personal Libraries/Pins/Pins.h</itemPath>
+      <itemPath>Config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,12 +18,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/A2D.c</itemPath>
       <itemPath>Initialize.c</itemPath>
       <itemPath>Main.c</itemPath>
-      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Pins.c</itemPath>
-      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/Timers.c</itemPath>
-      <itemPath>../../../Generic-Embedded-Peripherals/Firmware/I2C.c</itemPath>
+      <itemPath>../../../Personal Libraries/Timers/Firmware/Timers.c</itemPath>
+      <itemPath>../../../Personal Libraries/A2D/A2D.c</itemPath>
+      <itemPath>../../../Personal Libraries/I2C/I2C.c</itemPath>
+      <itemPath>../../../Personal Libraries/Pins/Pins.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -33,6 +33,10 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../../../Generic-Embedded-Peripherals/Firmware</Elem>
+    <Elem>../../../Personal Libraries/A2D</Elem>
+    <Elem>../../../Personal Libraries/I2C</Elem>
+    <Elem>../../../Personal Libraries/Pins</Elem>
+    <Elem>../../../Personal Libraries/Timers/Firmware</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -42,7 +46,7 @@
         <targetDevice>PIC24F08KL200</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>RealICEPlatformTool</platformTool>
+        <platformTool>ICD3PlatformTool</platformTool>
         <languageToolchain>C30</languageToolchain>
         <languageToolchainVersion>3_31</languageToolchainVersion>
         <platform>3</platform>
@@ -81,7 +85,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="extra-include-directories"
-                  value="C:\Users\craigc\Dropbox\Local Code\FanController\Firmware\Dynamic Fan Control.X;C:\Users\craigc\Dropbox\Local Code\Generic-Embedded-Peripherals\Firmware"/>
+                  value="C:\Users\Craig\Dropbox\Local Code\Personal Libraries\A2D;C:\Users\Craig\Dropbox\Local Code\Personal Libraries\I2C;C:\Users\Craig\Dropbox\Local Code\Personal Libraries\Pins;C:\Users\Craig\Dropbox\Local Code\Personal Libraries\Timers"/>
         <property key="isolate-each-function" value="false"/>
         <property key="optimization-level" value="0"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -95,8 +99,8 @@
       </C30-LD>
       <C30Global>
       </C30Global>
-      <RealICEPlatformTool>
-      </RealICEPlatformTool>
+      <ICD3PlatformTool>
+      </ICD3PlatformTool>
     </conf>
   </confs>
 </configurationDescriptor>

@@ -1,5 +1,5 @@
-#ifndef PROJECT_SETUP_H
-#define	PROJECT_SETUP_H
+#ifndef CONFIG_H
+#define	CONFIG_H
 
 //Hardware specific include file
 #include <p24F08KL200.h>
@@ -38,4 +38,4 @@
 #define OC7		7
 #define OC8		8
 
-#endif	/* PROJECT_SETUP_H */
+#endif	/* CONFIG_H */
