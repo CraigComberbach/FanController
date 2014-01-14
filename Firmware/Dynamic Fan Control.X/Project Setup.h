@@ -6,6 +6,15 @@
 
 //Clock Frequency
 #define FOSC_HZ	8000000	//8MHz
+#define FCY_HZ	(FOSC_HZ/2)
+
+//Units
+enum FREQUENCY_UNITS
+{
+	MHz,	//Mega-Hertz
+	kHz,	//Kilo-Hertz
+	Hz		//Hertz
+};
 
 //Timers
 #define UNUSED_TMR1	TIMER1

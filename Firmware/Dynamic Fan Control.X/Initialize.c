@@ -64,14 +64,14 @@ void Initialize_Microchip(void)
 	Initialize_Pin(ra4, LOW, PUSH_PULL, OUTPUT);
 	Initialize_Pin(ra6, LOW, PUSH_PULL, OUTPUT);
 	Initialize_Pin(rb4, LOW, PUSH_PULL, OUTPUT);
-	Initialize_Pin(rb8, LOW, PUSH_PULL, INPUT);
+	Initialize_Pin(rb8, LOW, PUSH_PULL, OUTPUT);
 	Initialize_Pin(rb9, LOW, PUSH_PULL, INPUT);
 	Initialize_Pin(rb14, LOW, PUSH_PULL, INPUT);
 	Initialize_Pin(rb15, LOW, PUSH_PULL, INPUT);
 
 	//Setup Timers
 //	Initialize_Timer();
-	Initialize_Timer(MAIN_LOOP, 1, MILLI_SECONDS, NO_TIMER_INTERRUPT);	//Setup to operate as a 1mS timer for main loop regulation
+	Initialize_Timer(MAIN_LOOP, 1, MILLI_SECONDS, &test);	//Setup to operate as a 1mS timer for main loop regulation
 //	Initialize_Timer();
 
 	//Setup Modules

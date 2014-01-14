@@ -52,6 +52,7 @@ v0.0.0	2013-07-11  Craig Comberbach
 /*************   Magic  Numbers   ***************/
 /***********State Machine Definitions*************/
 /*************  Global Variables  ***************/
+int loopDone = 0;
 /*************Function  Prototypes***************/
 /************* Device Definitions ***************/
 //_FBS(BWRP_OFF & BSS_OFF)
@@ -73,10 +74,23 @@ int main()
 	while(1)
 	{
 //		A2D_Routine();
+		TRISBbits.TRISB8 = 0;
+		LATBbits.LATB8 ^= 1;
 
 		//Main loop timing
-		while(Current_Timer(MAIN_LOOP, MICRO_SECONDS) < 1/*mS*/);
+		while(!loopDone);
+		loopDone = 0;
 	}
 
+	return;
+}
+
+void test(void)
+{
+	Nop();
+	Nop();
+	Nop();
+	Nop();
+	loopDone = 1;
 	return;
 }

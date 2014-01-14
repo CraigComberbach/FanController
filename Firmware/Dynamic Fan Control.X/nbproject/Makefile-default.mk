@@ -44,12 +44,18 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 # Distribution Directory
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
+# Source Files Quoted if spaced
+SOURCEFILES_QUOTED_IF_SPACED=../../../Generic-Embedded-Peripherals/Firmware/A2D.c Initialize.c Main.c ../../../Generic-Embedded-Peripherals/Firmware/Pins.c ../../../Generic-Embedded-Peripherals/Firmware/Timers.c ../../../Generic-Embedded-Peripherals/Firmware/I2C.c
+
 # Object Files Quoted if spaced
 OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1242232017/A2D.o ${OBJECTDIR}/Initialize.o ${OBJECTDIR}/Main.o ${OBJECTDIR}/_ext/1242232017/Pins.o ${OBJECTDIR}/_ext/1242232017/Timers.o ${OBJECTDIR}/_ext/1242232017/I2C.o
 POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1242232017/A2D.o.d ${OBJECTDIR}/Initialize.o.d ${OBJECTDIR}/Main.o.d ${OBJECTDIR}/_ext/1242232017/Pins.o.d ${OBJECTDIR}/_ext/1242232017/Timers.o.d ${OBJECTDIR}/_ext/1242232017/I2C.o.d
 
 # Object Files
 OBJECTFILES=${OBJECTDIR}/_ext/1242232017/A2D.o ${OBJECTDIR}/Initialize.o ${OBJECTDIR}/Main.o ${OBJECTDIR}/_ext/1242232017/Pins.o ${OBJECTDIR}/_ext/1242232017/Timers.o ${OBJECTDIR}/_ext/1242232017/I2C.o
+
+# Source Files
+SOURCEFILES=../../../Generic-Embedded-Peripherals/Firmware/A2D.c Initialize.c Main.c ../../../Generic-Embedded-Peripherals/Firmware/Pins.c ../../../Generic-Embedded-Peripherals/Firmware/Timers.c ../../../Generic-Embedded-Peripherals/Firmware/I2C.c
 
 
 CFLAGS=
@@ -89,37 +95,37 @@ ${OBJECTDIR}/_ext/1242232017/A2D.o: ../../../Generic-Embedded-Peripherals/Firmwa
 	@${MKDIR} ${OBJECTDIR}/_ext/1242232017 
 	@${RM} ${OBJECTDIR}/_ext/1242232017/A2D.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1242232017/A2D.o.ok ${OBJECTDIR}/_ext/1242232017/A2D.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1242232017/A2D.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/_ext/1242232017/A2D.o.d" -o ${OBJECTDIR}/_ext/1242232017/A2D.o ../../../Generic-Embedded-Peripherals/Firmware/A2D.c    
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1242232017/A2D.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/_ext/1242232017/A2D.o.d" -o ${OBJECTDIR}/_ext/1242232017/A2D.o ../../../Generic-Embedded-Peripherals/Firmware/A2D.c    
 	
 ${OBJECTDIR}/Initialize.o: Initialize.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/Initialize.o.d 
 	@${RM} ${OBJECTDIR}/Initialize.o.ok ${OBJECTDIR}/Initialize.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/Initialize.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/Initialize.o.d" -o ${OBJECTDIR}/Initialize.o Initialize.c    
+	@${FIXDEPS} "${OBJECTDIR}/Initialize.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/Initialize.o.d" -o ${OBJECTDIR}/Initialize.o Initialize.c    
 	
 ${OBJECTDIR}/Main.o: Main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
 	@${RM} ${OBJECTDIR}/Main.o.d 
 	@${RM} ${OBJECTDIR}/Main.o.ok ${OBJECTDIR}/Main.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/Main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/Main.o.d" -o ${OBJECTDIR}/Main.o Main.c    
+	@${FIXDEPS} "${OBJECTDIR}/Main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/Main.o.d" -o ${OBJECTDIR}/Main.o Main.c    
 	
 ${OBJECTDIR}/_ext/1242232017/Pins.o: ../../../Generic-Embedded-Peripherals/Firmware/Pins.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1242232017 
 	@${RM} ${OBJECTDIR}/_ext/1242232017/Pins.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1242232017/Pins.o.ok ${OBJECTDIR}/_ext/1242232017/Pins.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1242232017/Pins.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/_ext/1242232017/Pins.o.d" -o ${OBJECTDIR}/_ext/1242232017/Pins.o ../../../Generic-Embedded-Peripherals/Firmware/Pins.c    
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1242232017/Pins.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/_ext/1242232017/Pins.o.d" -o ${OBJECTDIR}/_ext/1242232017/Pins.o ../../../Generic-Embedded-Peripherals/Firmware/Pins.c    
 	
 ${OBJECTDIR}/_ext/1242232017/Timers.o: ../../../Generic-Embedded-Peripherals/Firmware/Timers.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1242232017 
 	@${RM} ${OBJECTDIR}/_ext/1242232017/Timers.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1242232017/Timers.o.ok ${OBJECTDIR}/_ext/1242232017/Timers.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1242232017/Timers.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/_ext/1242232017/Timers.o.d" -o ${OBJECTDIR}/_ext/1242232017/Timers.o ../../../Generic-Embedded-Peripherals/Firmware/Timers.c    
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1242232017/Timers.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/_ext/1242232017/Timers.o.d" -o ${OBJECTDIR}/_ext/1242232017/Timers.o ../../../Generic-Embedded-Peripherals/Firmware/Timers.c    
 	
 ${OBJECTDIR}/_ext/1242232017/I2C.o: ../../../Generic-Embedded-Peripherals/Firmware/I2C.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR}/_ext/1242232017 
 	@${RM} ${OBJECTDIR}/_ext/1242232017/I2C.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1242232017/I2C.o.ok ${OBJECTDIR}/_ext/1242232017/I2C.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1242232017/I2C.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/_ext/1242232017/I2C.o.d" -o ${OBJECTDIR}/_ext/1242232017/I2C.o ../../../Generic-Embedded-Peripherals/Firmware/I2C.c    
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1242232017/I2C.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/craigc/Dropbox/Local Code/FanController/Firmware/Dynamic Fan Control.X" -I"C:/Users/craigc/Dropbox/Local Code/Generic-Embedded-Peripherals/Firmware" -MMD -MF "${OBJECTDIR}/_ext/1242232017/I2C.o.d" -o ${OBJECTDIR}/_ext/1242232017/I2C.o ../../../Generic-Embedded-Peripherals/Firmware/I2C.c    
 	
 else
 ${OBJECTDIR}/_ext/1242232017/A2D.o: ../../../Generic-Embedded-Peripherals/Firmware/A2D.c  nbproject/Makefile-${CND_CONF}.mk
@@ -165,11 +171,11 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -omf=elf -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1 -o dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}         -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_REAL_ICE=1
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -omf=elf -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -o dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}         -Wl,--defsym=__MPLAB_BUILD=1,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_ICD3=1
 else
 dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -omf=elf -mcpu=$(MP_PROCESSOR_OPTION)  -o dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}         -Wl,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION)
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -omf=elf -mcpu=$(MP_PROCESSOR_OPTION)  -o dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}         -Wl,--defsym=__MPLAB_BUILD=1,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION)
 	${MP_CC_DIR}\\pic30-bin2hex dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} -omf=elf
 endif
 

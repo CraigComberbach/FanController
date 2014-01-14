@@ -11,6 +11,6 @@
 /***********State Machine Definitions************/
 /*************Function  Prototypes***************/
 void Initialize_Microchip(void);
-
+void test(void);
 #endif	/* INITIALIZE_H */
 
