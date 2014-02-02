@@ -56,8 +56,9 @@ struct PIN_DEFINITION RB9 = {0x0200, &TRISB, &ODCB, &LATB, &PORTB};
 struct PIN_DEFINITION RB14 = {0x4000, &TRISB, &ODCB, &LATB, &PORTB};
 struct PIN_DEFINITION RB15 = {0x8000, &TRISB, &ODCB, &LATB, &PORTB};
 
-
 /*************Function  Prototypes***************/
+void timerTest(void);
+
 /************* Device Definitions ***************/
 /************* Module Definitions ***************/
 /************* Other  Definitions ***************/
@@ -72,18 +73,24 @@ void Configure_For_Dynamic_Fan_Control(void)
 	Pin_Initialize(RA4, LOW, PUSH_PULL, OUTPUT);
 	Pin_Initialize(RA6, LOW, PUSH_PULL, OUTPUT);
 	Pin_Initialize(RB4, LOW, PUSH_PULL, OUTPUT);
-	Pin_Initialize(RB8, LOW, PUSH_PULL, INPUT);
+	Pin_Initialize(RB8, LOW, OPEN_DRAIN, OUTPUT);
 	Pin_Initialize(RB9, LOW, PUSH_PULL, INPUT);
 	Pin_Initialize(RB14, LOW, PUSH_PULL, INPUT);
 	Pin_Initialize(RB15, LOW, PUSH_PULL, INPUT);
 
 	//Setup Timers
 //	Initialize_Timer();
-	Initialize_Timer(MAIN_LOOP, 1, MILLI_SECONDS, NO_TIMER_INTERRUPT);	//Setup to operate as a 1mS timer for main loop regulation
+	Initialize_Timer(MAIN_LOOP, 1, SECONDS, &timerTest);	//Setup to operate as a 1mS timer for main loop regulation
 //	Initialize_Timer();
 
 	//Setup Modules
 	Initialize_A2D();
 
+	return;
+}
+
+void timerTest(void)
+{
+	Nop();
 	return;
 }

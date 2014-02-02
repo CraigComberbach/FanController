@@ -16,6 +16,7 @@ v0.0.0	2013-07-11  Craig Comberbach
 #include "Config.h"
 #include "Timers.h"
 #include "A2D.h"
+#include "Pins.h"
 
 /************Arbitrary Functionality*************/
 /*************   Magic  Numbers   ***************/
@@ -42,9 +43,10 @@ int main()
 	while(1)
 	{
 //		A2D_Routine();
-
+		Pin_Write(RB8, HIGH);
+		Pin_Write(RB8, LOW);
 		//Main loop timing
-		while(Current_Timer(MAIN_LOOP, MICRO_SECONDS) < 1/*mS*/);
+//		while(Current_Timer(MAIN_LOOP, MICRO_SECONDS) < 1/*mS*/);
 	}
 
 	return;

@@ -8,8 +8,8 @@
 #define FOSC_HZ	8000000	//8MHz
 
 //Timers
-#define UNUSED_TMR1	TIMER1
-#define MAIN_LOOP	TIMER2
+#define MAIN_LOOP	TIMER1
+#define UNUSED_TMR2	TIMER2
 #define UNUSED_TMR3	TIMER3
 
 //I2C Modules
@@ -37,6 +37,19 @@
 #define OC6		6
 #define OC7		7
 #define OC8		8
+
+//Pins
+extern struct PIN_DEFINITION RA0;
+extern struct PIN_DEFINITION RA1;
+extern struct PIN_DEFINITION RA2;
+extern struct PIN_DEFINITION RA3;
+extern struct PIN_DEFINITION RA4;
+extern struct PIN_DEFINITION RA6;
+extern struct PIN_DEFINITION RB4;
+extern struct PIN_DEFINITION RB8;
+extern struct PIN_DEFINITION RB9;
+extern struct PIN_DEFINITION RB14;
+extern struct PIN_DEFINITION RB15;
 
 //Libaries
 //A2D Library
