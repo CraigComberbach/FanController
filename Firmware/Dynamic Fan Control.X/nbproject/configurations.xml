@@ -4,12 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Initialize.h</itemPath>
-      <itemPath>../../../Personal Libraries/Timers/Firmware/Timers.h</itemPath>
-      <itemPath>../../../Personal Libraries/A2D/A2D.h</itemPath>
-      <itemPath>../../../Personal Libraries/I2C/I2C.h</itemPath>
-      <itemPath>../../../Personal Libraries/Pins/Pins.h</itemPath>
       <itemPath>Config.h</itemPath>
+      <itemPath>../../../Libraries/A2D/A2D.h</itemPath>
+      <itemPath>../../../Libraries/I2C/I2C.h</itemPath>
+      <itemPath>../../../Libraries/Pins/Pins.h</itemPath>
+      <itemPath>../../../Libraries/Timers/Firmware/Timers.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,12 +17,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Initialize.c</itemPath>
       <itemPath>Main.c</itemPath>
-      <itemPath>../../../Personal Libraries/Timers/Firmware/Timers.c</itemPath>
-      <itemPath>../../../Personal Libraries/A2D/A2D.c</itemPath>
-      <itemPath>../../../Personal Libraries/I2C/I2C.c</itemPath>
-      <itemPath>../../../Personal Libraries/Pins/Pins.c</itemPath>
+      <itemPath>../../../Libraries/Timers/Firmware/Timers.c</itemPath>
+      <itemPath>../../../Libraries/Pins/Pins.c</itemPath>
+      <itemPath>../../../Libraries/I2C/I2C.c</itemPath>
+      <itemPath>../../../Libraries/A2D/A2D.c</itemPath>
+      <itemPath>Config.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -32,11 +31,11 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>../../../Generic-Embedded-Peripherals/Firmware</Elem>
-    <Elem>../../../Personal Libraries/A2D</Elem>
-    <Elem>../../../Personal Libraries/I2C</Elem>
-    <Elem>../../../Personal Libraries/Pins</Elem>
-    <Elem>../../../Personal Libraries/Timers/Firmware</Elem>
+    <Elem>C:\Users\craigc\Dropbox\Local Code\Personal Projects\FanController\Firmware\Dynamic Fan Control.X\../../../Personal Libraries/A2D</Elem>
+    <Elem>C:\Users\craigc\Dropbox\Local Code\Personal Projects\FanController\Firmware\Dynamic Fan Control.X\../../../Personal Libraries/I2C</Elem>
+    <Elem>C:\Users\craigc\Dropbox\Local Code\Personal Projects\FanController\Firmware\Dynamic Fan Control.X\../../../Personal Libraries/Pins</Elem>
+    <Elem>C:\Users\craigc\Dropbox\Local Code\Personal Projects\FanController\Firmware\Dynamic Fan Control.X\../../../Personal Libraries/Timers/Firmware</Elem>
+    <Elem>C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -47,8 +46,8 @@
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>ICD3PlatformTool</platformTool>
-        <languageToolchain>C30</languageToolchain>
-        <languageToolchainVersion>3_31</languageToolchainVersion>
+        <languageToolchain>XC16</languageToolchain>
+        <languageToolchainVersion>1.11</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <compileType>
@@ -85,21 +84,130 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="extra-include-directories"
-                  value="C:\Users\Craig\Dropbox\Local Code\Personal Libraries\A2D;C:\Users\Craig\Dropbox\Local Code\Personal Libraries\I2C;C:\Users\Craig\Dropbox\Local Code\Personal Libraries\Pins;C:\Users\Craig\Dropbox\Local Code\Personal Libraries\Timers"/>
+                  value="..\..\..\Libraries\A2D;..\..\..\Libraries\I2C;..\..\..\Libraries\Pins;..\..\..\Libraries\Timers\Firmware;C:\Users\craigc\Dropbox\Local Code\Personal Projects\FanController\Firmware\Dynamic Fan Control.X"/>
         <property key="isolate-each-function" value="false"/>
+        <property key="keep-inline" value="false"/>
+        <property key="oXC16gcc-align-arr" value="false"/>
+        <property key="oXC16gcc-cnsts-mauxflash" value="false"/>
+        <property key="oXC16gcc-data-sects" value="false"/>
+        <property key="oXC16gcc-errata" value=""/>
+        <property key="oXC16gcc-fillupper" value=""/>
+        <property key="oXC16gcc-large-aggregate" value="false"/>
+        <property key="oXC16gcc-mauxflash" value="false"/>
+        <property key="oXC16gcc-mpa-lvl" value=""/>
+        <property key="oXC16gcc-name-text-sec" value=""/>
+        <property key="oXC16gcc-near-chars" value="false"/>
+        <property key="oXC16gcc-no-isr-warn" value="false"/>
+        <property key="oXC16gcc-sfr-warn" value="false"/>
+        <property key="oXC16gcc-smar-io-lvl" value="1"/>
+        <property key="oXC16gcc-smart-io-fmt" value=""/>
         <property key="optimization-level" value="0"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros" value=""/>
         <property key="scalar-model" value="default"/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
       </C30>
       <C30-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="false-conditionals" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-section-info" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC16asm-extra-opts" value=""/>
+        <property key="oXC16asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="relax" value="false"/>
+        <property key="warning-level" value="emit-warnings"/>
       </C30-AS>
       <C30-LD>
+        <property key="additional-options-use-response-files" value="false"/>
+        <property key="boot-eeprom" value="no_eeprom"/>
+        <property key="boot-flash" value="no_flash"/>
+        <property key="boot-ram" value="no_ram"/>
+        <property key="boot-write-protect" value="no_write_protect"/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="enable-data-init" value="true"/>
+        <property key="enable-default-isr" value="true"/>
+        <property key="enable-handles" value="true"/>
+        <property key="enable-pack-data" value="true"/>
+        <property key="extra-lib-directories" value=""/>
+        <property key="general-code-protect" value="no_code_protect"/>
+        <property key="general-write-protect" value="no_write_protect"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="heap-size" value=""/>
+        <property key="input-libraries" value=""/>
+        <property key="linker-symbols" value=""/>
+        <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
+        <property key="oXC16ld-extra-opts" value=""/>
+        <property key="oXC16ld-fill-upper" value="0"/>
+        <property key="oXC16ld-force-link" value="false"/>
+        <property key="oXC16ld-no-smart-io" value="false"/>
+        <property key="oXC16ld-nostdlib" value="false"/>
+        <property key="oXC16ld-stackguard" value="16"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="remove-unused-sections" value="false"/>
+        <property key="report-memory-usage" value="false"/>
+        <property key="secure-eeprom" value="no_eeprom"/>
+        <property key="secure-flash" value="no_flash"/>
+        <property key="secure-ram" value="no_ram"/>
+        <property key="secure-write-protect" value="no_write_protect"/>
+        <property key="stack-size" value=""/>
+        <property key="symbol-stripping" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="warn-section-align" value="false"/>
       </C30-LD>
       <C30Global>
+        <property key="fast-math" value="false"/>
+        <property key="generic-16-bit" value="false"/>
+        <property key="legacy-libc" value="false"/>
+        <property key="oXC16glb-macros" value=""/>
+        <property key="output-file-format" value="elf"/>
+        <property key="save-temps" value="false"/>
       </C30Global>
       <ICD3PlatformTool>
+        <property key="ADC 1" value="true"/>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="CLOCK CONTROL LVDCON" value="true"/>
+        <property key="CLOCK CONTROL REFOCON" value="true"/>
+        <property key="COMPARATOR" value="true"/>
+        <property key="Freeze All Other Peripherals" value="true"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="TIMER1" value="true"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="UART 1" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="hwtoolclock.frcindebug" value="false"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="false"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.end" value="0x15ff"/>
+        <property key="memories.programmemory.start" value="0x0"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveprogramrange.end" value="0x15ff"/>
+        <property key="programoptions.preserveprogramrange.start" value="0x0"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.testmodeentrymethod" value="VPPFirst"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="false"/>
+        <property key="voltagevalue" value="3.25"/>
       </ICD3PlatformTool>
     </conf>
   </confs>

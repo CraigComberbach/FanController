@@ -14,32 +14,8 @@ v0.0.0	2013-07-11  Craig Comberbach
 **************************************************************************************************/
 /*************    Header Files    ***************/
 #include "Config.h"
-#include "Initialize.h"
 #include "Timers.h"
 #include "A2D.h"
-
-/************* Semantic Versioning***************/
-//This code requires A2D.c to fulfill it's roll
-#ifndef A2D_LIBRARY
-	#error "You need to include the A2D library for this code to compile"
-#elif A2D_MAJOR != 0
-	#warning "A2D.c has Major has changed"
-#elif A2D_MINOR != 0
-	#warning "A2D.c has new features that this code may benefit from"
-#elif A2D_PATCH != 0
-	#warning "A2D.c has had a bug fix, you should check to see that we weren't relying on a bug for functionality"
-#endif
-
-//This code requires Timers.c to fulfil it's roll
-#ifndef TIMERS_LIBRARY
-	#error "You need to include the Timers library for this code to compile"
-#elif TIMERS_MAJOR != 0
-	#warning "Timer.c has Major has changed"
-#elif TIMERS_MINOR != 3
-	#warning "Timer.c has new features that this code may benefit from"
-#elif TIMERS_PATCH != 0
-	#warning "Timer.c has had a bug fix, you should check to see that we weren't relying on a bug for functionality"
-#endif
 
 /************Arbitrary Functionality*************/
 /*************   Magic  Numbers   ***************/
@@ -61,7 +37,7 @@ _FICD(ICS_PGx2)
 int main()
 {
 	//Initialize pins, modules, etc
-	Initialize_Microchip();
+	Configure_For_Dynamic_Fan_Control();
 
 	while(1)
 	{

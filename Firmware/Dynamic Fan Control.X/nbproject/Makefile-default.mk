@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Initialize.c Main.c "../../../Personal Libraries/Timers/Firmware/Timers.c" "../../../Personal Libraries/A2D/A2D.c" "../../../Personal Libraries/I2C/I2C.c" "../../../Personal Libraries/Pins/Pins.c"
+SOURCEFILES_QUOTED_IF_SPACED=Main.c ../../../Libraries/Timers/Firmware/Timers.c ../../../Libraries/Pins/Pins.c ../../../Libraries/I2C/I2C.c ../../../Libraries/A2D/A2D.c Config.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Initialize.o ${OBJECTDIR}/Main.o ${OBJECTDIR}/_ext/122442901/Timers.o ${OBJECTDIR}/_ext/1466736756/A2D.o ${OBJECTDIR}/_ext/1466729069/I2C.o ${OBJECTDIR}/_ext/1776301957/Pins.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Initialize.o.d ${OBJECTDIR}/Main.o.d ${OBJECTDIR}/_ext/122442901/Timers.o.d ${OBJECTDIR}/_ext/1466736756/A2D.o.d ${OBJECTDIR}/_ext/1466729069/I2C.o.d ${OBJECTDIR}/_ext/1776301957/Pins.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Main.o ${OBJECTDIR}/_ext/972003159/Timers.o ${OBJECTDIR}/_ext/93644285/Pins.o ${OBJECTDIR}/_ext/972860587/I2C.o ${OBJECTDIR}/_ext/972868274/A2D.o ${OBJECTDIR}/Config.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/Main.o.d ${OBJECTDIR}/_ext/972003159/Timers.o.d ${OBJECTDIR}/_ext/93644285/Pins.o.d ${OBJECTDIR}/_ext/972860587/I2C.o.d ${OBJECTDIR}/_ext/972868274/A2D.o.d ${OBJECTDIR}/Config.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Initialize.o ${OBJECTDIR}/Main.o ${OBJECTDIR}/_ext/122442901/Timers.o ${OBJECTDIR}/_ext/1466736756/A2D.o ${OBJECTDIR}/_ext/1466729069/I2C.o ${OBJECTDIR}/_ext/1776301957/Pins.o
+OBJECTFILES=${OBJECTDIR}/Main.o ${OBJECTDIR}/_ext/972003159/Timers.o ${OBJECTDIR}/_ext/93644285/Pins.o ${OBJECTDIR}/_ext/972860587/I2C.o ${OBJECTDIR}/_ext/972868274/A2D.o ${OBJECTDIR}/Config.o
 
 # Source Files
-SOURCEFILES=Initialize.c Main.c ../../../Personal Libraries/Timers/Firmware/Timers.c ../../../Personal Libraries/A2D/A2D.c ../../../Personal Libraries/I2C/I2C.c ../../../Personal Libraries/Pins/Pins.c
+SOURCEFILES=Main.c ../../../Libraries/Timers/Firmware/Timers.c ../../../Libraries/Pins/Pins.c ../../../Libraries/I2C/I2C.c ../../../Libraries/A2D/A2D.c Config.c
 
 
 CFLAGS=
@@ -75,7 +75,97 @@ FIXDEPS=fixDeps
 	${MAKE} ${MAKE_OPTIONS} -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 MP_PROCESSOR_OPTION=24F08KL200
-MP_LINKER_FILE_OPTION=,-Tp24F08KL200.gld
+MP_LINKER_FILE_OPTION=,--script=p24F08KL200.gld
+# ------------------------------------------------------------------------------------
+# Rules for buildStep: compile
+ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/Main.o: Main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/Main.o.d 
+	@${RM} ${OBJECTDIR}/Main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Main.c  -o ${OBJECTDIR}/Main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/Main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/972003159/Timers.o: ../../../Libraries/Timers/Firmware/Timers.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/972003159 
+	@${RM} ${OBJECTDIR}/_ext/972003159/Timers.o.d 
+	@${RM} ${OBJECTDIR}/_ext/972003159/Timers.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../Libraries/Timers/Firmware/Timers.c  -o ${OBJECTDIR}/_ext/972003159/Timers.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/972003159/Timers.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/972003159/Timers.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/93644285/Pins.o: ../../../Libraries/Pins/Pins.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/93644285 
+	@${RM} ${OBJECTDIR}/_ext/93644285/Pins.o.d 
+	@${RM} ${OBJECTDIR}/_ext/93644285/Pins.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../Libraries/Pins/Pins.c  -o ${OBJECTDIR}/_ext/93644285/Pins.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/93644285/Pins.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/93644285/Pins.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/972860587/I2C.o: ../../../Libraries/I2C/I2C.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/972860587 
+	@${RM} ${OBJECTDIR}/_ext/972860587/I2C.o.d 
+	@${RM} ${OBJECTDIR}/_ext/972860587/I2C.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../Libraries/I2C/I2C.c  -o ${OBJECTDIR}/_ext/972860587/I2C.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/972860587/I2C.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/972860587/I2C.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/972868274/A2D.o: ../../../Libraries/A2D/A2D.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/972868274 
+	@${RM} ${OBJECTDIR}/_ext/972868274/A2D.o.d 
+	@${RM} ${OBJECTDIR}/_ext/972868274/A2D.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../Libraries/A2D/A2D.c  -o ${OBJECTDIR}/_ext/972868274/A2D.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/972868274/A2D.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/972868274/A2D.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/Config.o: Config.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/Config.o.d 
+	@${RM} ${OBJECTDIR}/Config.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Config.c  -o ${OBJECTDIR}/Config.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Config.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/Config.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+else
+${OBJECTDIR}/Main.o: Main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/Main.o.d 
+	@${RM} ${OBJECTDIR}/Main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Main.c  -o ${OBJECTDIR}/Main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Main.o.d"      -g -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/Main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/972003159/Timers.o: ../../../Libraries/Timers/Firmware/Timers.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/972003159 
+	@${RM} ${OBJECTDIR}/_ext/972003159/Timers.o.d 
+	@${RM} ${OBJECTDIR}/_ext/972003159/Timers.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../Libraries/Timers/Firmware/Timers.c  -o ${OBJECTDIR}/_ext/972003159/Timers.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/972003159/Timers.o.d"      -g -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/972003159/Timers.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/93644285/Pins.o: ../../../Libraries/Pins/Pins.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/93644285 
+	@${RM} ${OBJECTDIR}/_ext/93644285/Pins.o.d 
+	@${RM} ${OBJECTDIR}/_ext/93644285/Pins.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../Libraries/Pins/Pins.c  -o ${OBJECTDIR}/_ext/93644285/Pins.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/93644285/Pins.o.d"      -g -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/93644285/Pins.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/972860587/I2C.o: ../../../Libraries/I2C/I2C.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/972860587 
+	@${RM} ${OBJECTDIR}/_ext/972860587/I2C.o.d 
+	@${RM} ${OBJECTDIR}/_ext/972860587/I2C.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../Libraries/I2C/I2C.c  -o ${OBJECTDIR}/_ext/972860587/I2C.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/972860587/I2C.o.d"      -g -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/972860587/I2C.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_ext/972868274/A2D.o: ../../../Libraries/A2D/A2D.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR}/_ext/972868274 
+	@${RM} ${OBJECTDIR}/_ext/972868274/A2D.o.d 
+	@${RM} ${OBJECTDIR}/_ext/972868274/A2D.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  ../../../Libraries/A2D/A2D.c  -o ${OBJECTDIR}/_ext/972868274/A2D.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/972868274/A2D.o.d"      -g -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/_ext/972868274/A2D.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/Config.o: Config.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/Config.o.d 
+	@${RM} ${OBJECTDIR}/Config.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Config.c  -o ${OBJECTDIR}/Config.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Config.o.d"      -g -omf=elf -O0 -I"../../../Libraries/A2D" -I"../../../Libraries/I2C" -I"../../../Libraries/Pins" -I"../../../Libraries/Timers/Firmware" -I"C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X" -msmart-io=1 -msfr-warn=off
+	@${FIXDEPS} "${OBJECTDIR}/Config.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+endif
+
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
@@ -83,87 +173,9 @@ else
 endif
 
 # ------------------------------------------------------------------------------------
-# Rules for buildStep: assembleWithPreprocess
+# Rules for buildStep: assemblePreproc
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 else
-endif
-
-# ------------------------------------------------------------------------------------
-# Rules for buildStep: compile
-ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/Initialize.o: Initialize.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Initialize.o.d 
-	@${RM} ${OBJECTDIR}/Initialize.o.ok ${OBJECTDIR}/Initialize.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/Initialize.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/Initialize.o.d" -o ${OBJECTDIR}/Initialize.o Initialize.c    
-	
-${OBJECTDIR}/Main.o: Main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Main.o.d 
-	@${RM} ${OBJECTDIR}/Main.o.ok ${OBJECTDIR}/Main.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/Main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/Main.o.d" -o ${OBJECTDIR}/Main.o Main.c    
-	
-${OBJECTDIR}/_ext/122442901/Timers.o: ../../../Personal\ Libraries/Timers/Firmware/Timers.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/122442901 
-	@${RM} ${OBJECTDIR}/_ext/122442901/Timers.o.d 
-	@${RM} ${OBJECTDIR}/_ext/122442901/Timers.o.ok ${OBJECTDIR}/_ext/122442901/Timers.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/122442901/Timers.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/_ext/122442901/Timers.o.d" -o ${OBJECTDIR}/_ext/122442901/Timers.o "../../../Personal Libraries/Timers/Firmware/Timers.c"    
-	
-${OBJECTDIR}/_ext/1466736756/A2D.o: ../../../Personal\ Libraries/A2D/A2D.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1466736756 
-	@${RM} ${OBJECTDIR}/_ext/1466736756/A2D.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466736756/A2D.o.ok ${OBJECTDIR}/_ext/1466736756/A2D.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466736756/A2D.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/_ext/1466736756/A2D.o.d" -o ${OBJECTDIR}/_ext/1466736756/A2D.o "../../../Personal Libraries/A2D/A2D.c"    
-	
-${OBJECTDIR}/_ext/1466729069/I2C.o: ../../../Personal\ Libraries/I2C/I2C.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1466729069 
-	@${RM} ${OBJECTDIR}/_ext/1466729069/I2C.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466729069/I2C.o.ok ${OBJECTDIR}/_ext/1466729069/I2C.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466729069/I2C.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/_ext/1466729069/I2C.o.d" -o ${OBJECTDIR}/_ext/1466729069/I2C.o "../../../Personal Libraries/I2C/I2C.c"    
-	
-${OBJECTDIR}/_ext/1776301957/Pins.o: ../../../Personal\ Libraries/Pins/Pins.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1776301957 
-	@${RM} ${OBJECTDIR}/_ext/1776301957/Pins.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1776301957/Pins.o.ok ${OBJECTDIR}/_ext/1776301957/Pins.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1776301957/Pins.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/_ext/1776301957/Pins.o.d" -o ${OBJECTDIR}/_ext/1776301957/Pins.o "../../../Personal Libraries/Pins/Pins.c"    
-	
-else
-${OBJECTDIR}/Initialize.o: Initialize.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Initialize.o.d 
-	@${RM} ${OBJECTDIR}/Initialize.o.ok ${OBJECTDIR}/Initialize.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/Initialize.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/Initialize.o.d" -o ${OBJECTDIR}/Initialize.o Initialize.c    
-	
-${OBJECTDIR}/Main.o: Main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR} 
-	@${RM} ${OBJECTDIR}/Main.o.d 
-	@${RM} ${OBJECTDIR}/Main.o.ok ${OBJECTDIR}/Main.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/Main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/Main.o.d" -o ${OBJECTDIR}/Main.o Main.c    
-	
-${OBJECTDIR}/_ext/122442901/Timers.o: ../../../Personal\ Libraries/Timers/Firmware/Timers.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/122442901 
-	@${RM} ${OBJECTDIR}/_ext/122442901/Timers.o.d 
-	@${RM} ${OBJECTDIR}/_ext/122442901/Timers.o.ok ${OBJECTDIR}/_ext/122442901/Timers.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/122442901/Timers.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/_ext/122442901/Timers.o.d" -o ${OBJECTDIR}/_ext/122442901/Timers.o "../../../Personal Libraries/Timers/Firmware/Timers.c"    
-	
-${OBJECTDIR}/_ext/1466736756/A2D.o: ../../../Personal\ Libraries/A2D/A2D.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1466736756 
-	@${RM} ${OBJECTDIR}/_ext/1466736756/A2D.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466736756/A2D.o.ok ${OBJECTDIR}/_ext/1466736756/A2D.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466736756/A2D.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/_ext/1466736756/A2D.o.d" -o ${OBJECTDIR}/_ext/1466736756/A2D.o "../../../Personal Libraries/A2D/A2D.c"    
-	
-${OBJECTDIR}/_ext/1466729069/I2C.o: ../../../Personal\ Libraries/I2C/I2C.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1466729069 
-	@${RM} ${OBJECTDIR}/_ext/1466729069/I2C.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1466729069/I2C.o.ok ${OBJECTDIR}/_ext/1466729069/I2C.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1466729069/I2C.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/_ext/1466729069/I2C.o.d" -o ${OBJECTDIR}/_ext/1466729069/I2C.o "../../../Personal Libraries/I2C/I2C.c"    
-	
-${OBJECTDIR}/_ext/1776301957/Pins.o: ../../../Personal\ Libraries/Pins/Pins.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} ${OBJECTDIR}/_ext/1776301957 
-	@${RM} ${OBJECTDIR}/_ext/1776301957/Pins.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1776301957/Pins.o.ok ${OBJECTDIR}/_ext/1776301957/Pins.o.err 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1776301957/Pins.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c ${MP_CC} $(MP_EXTRA_CC_PRE)  -g -omf=elf -x c -c -mcpu=$(MP_PROCESSOR_OPTION) -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/A2D" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/I2C" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Pins" -I"C:/Users/Craig/Dropbox/Local Code/Personal Libraries/Timers" -MMD -MF "${OBJECTDIR}/_ext/1776301957/Pins.o.d" -o ${OBJECTDIR}/_ext/1776301957/Pins.o "../../../Personal Libraries/Pins/Pins.c"    
-	
 endif
 
 # ------------------------------------------------------------------------------------
@@ -171,12 +183,14 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk    
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -omf=elf -mcpu=$(MP_PROCESSOR_OPTION)  -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -o dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}         -Wl,--defsym=__MPLAB_BUILD=1,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION),--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_ICD3=1
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -o dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1  -omf=elf -Wl,--defsym=__MPLAB_BUILD=1,--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--defsym=__MPLAB_DEBUGGER_ICD3=1,$(MP_LINKER_FILE_OPTION),--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"$(MP_EXTRA_LD_POST) 
+	
 else
 dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk   
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_CC} $(MP_EXTRA_LD_PRE)  -omf=elf -mcpu=$(MP_PROCESSOR_OPTION)  -o dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} ${OBJECTFILES_QUOTED_IF_SPACED}         -Wl,--defsym=__MPLAB_BUILD=1,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"$(MP_EXTRA_LD_POST)$(MP_LINKER_FILE_OPTION)
-	${MP_CC_DIR}\\pic30-bin2hex dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} -omf=elf
+	${MP_CC} $(MP_EXTRA_LD_PRE)  -o dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}      -mcpu=$(MP_PROCESSOR_OPTION)        -omf=elf -Wl,--defsym=__MPLAB_BUILD=1,$(MP_LINKER_FILE_OPTION),--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,-Map="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"$(MP_EXTRA_LD_POST) 
+	${MP_CC_DIR}\\xc16-bin2hex dist/${CND_CONF}/${IMAGE_TYPE}/Dynamic_Fan_Control.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX} -a  -omf=elf 
+	
 endif
 
 
