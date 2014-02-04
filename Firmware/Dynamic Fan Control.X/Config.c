@@ -73,7 +73,7 @@ void Configure_For_Dynamic_Fan_Control(void)
 	Pin_Initialize(RA4, LOW, PUSH_PULL, OUTPUT);
 	Pin_Initialize(RA6, LOW, PUSH_PULL, OUTPUT);
 	Pin_Initialize(RB4, LOW, PUSH_PULL, OUTPUT);
-	Pin_Initialize(RB8, LOW, OPEN_DRAIN, OUTPUT);
+	Pin_Initialize(RB8, LOW, PUSH_PULL, OUTPUT);
 	Pin_Initialize(RB9, LOW, PUSH_PULL, INPUT);
 	Pin_Initialize(RB14, LOW, PUSH_PULL, INPUT);
 	Pin_Initialize(RB15, LOW, PUSH_PULL, INPUT);
@@ -92,5 +92,6 @@ void Configure_For_Dynamic_Fan_Control(void)
 void timerTest(void)
 {
 	Nop();
+	LATBbits.LATB8 ^= 1;
 	return;
 }

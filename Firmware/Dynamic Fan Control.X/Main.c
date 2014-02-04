@@ -43,11 +43,11 @@ int main()
 	while(1)
 	{
 //		A2D_Routine();
-		Pin_Write(RB8, HIGH);
-		Pin_Write(RB8, LOW);
+//		Pin_Write(RB8, HIGH);
+//		Pin_Write(RB8, LOW);
 		//Main loop timing
-//		while(Current_Timer(MAIN_LOOP, MICRO_SECONDS) < 1/*mS*/);
+//		while(Current_Timer(MAIN_LOOP, MILLI_SECONDS) < 999/*mS*/);
 	}
 
-	return;
+	return 0;
 }

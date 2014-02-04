@@ -5,7 +5,8 @@
 #include <p24F08KL200.h>
 
 //Clock Frequency
-#define FOSC_HZ	8000000	//8MHz
+#define FOSC_HZ	4000000	//8MHz
+is my crystal actually 4MHz or is my timer routine not working correctly?
 
 //Timers
 #define MAIN_LOOP	TIMER1
