@@ -11,7 +11,6 @@ v0.0.0	2013-07-11  Craig Comberbach
 	First version
 **************************************************************************************************/
 /*************    Header Files    ***************/
-#include <p24F08KL200.h>
 #include "Config.h"
 #include "../../../Libraries/A2D/A2D.h"
 #include "../../../Libraries/Pins/Pins.h"
@@ -36,7 +35,7 @@ v0.0.0	2013-07-11  Craig Comberbach
 
 //This project requires the I2C library to fulfil it's roll
 #ifndef I2C_LIBRARY
-	#error "You need to include the Timers library for this code to compile"
+	#error "You need to include the I2C library for this code to compile"
 #endif
 
 /************Arbitrary Functionality*************/

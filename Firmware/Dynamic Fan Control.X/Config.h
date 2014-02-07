@@ -6,7 +6,6 @@
 
 //Clock Frequency
 #define FOSC_HZ	4000000	//8MHz
-is my crystal actually 4MHz or is my timer routine not working correctly?
 
 //Timers
 #define MAIN_LOOP	TIMER1
@@ -17,6 +16,8 @@ is my crystal actually 4MHz or is my timer routine not working correctly?
 #define I2C_1	1
 #define I2C_2	2
 #define I2C_3	3
+#define I2C_USE_MASTER
+#define I2C_USE_SLAVE
 
 //SPI Modules
 #define SPI1	1
@@ -59,8 +60,8 @@ extern struct PIN_DEFINITION RB15;
 #define A2D_PATCH	0
 
 //Pins Library
-#define PINS_MAJOR	0
-#define PINS_MINOR	1
+#define PINS_MAJOR	1
+#define PINS_MINOR	0
 #define PINS_PATCH	0
 
 //I2C Library
