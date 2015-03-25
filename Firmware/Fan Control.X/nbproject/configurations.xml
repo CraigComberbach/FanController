@@ -4,11 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Config.h</itemPath>
       <itemPath>../../../Libraries/A2D/A2D.h</itemPath>
-      <itemPath>../../../Libraries/I2C/I2C.h</itemPath>
       <itemPath>../../../Libraries/Pins/Pins.h</itemPath>
-      <itemPath>../../../Libraries/Timers/Firmware/Timers.h</itemPath>
+      <itemPath>../Config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -17,12 +15,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Main.c</itemPath>
-      <itemPath>../../../Libraries/Timers/Firmware/Timers.c</itemPath>
       <itemPath>../../../Libraries/Pins/Pins.c</itemPath>
-      <itemPath>../../../Libraries/I2C/I2C.c</itemPath>
       <itemPath>../../../Libraries/A2D/A2D.c</itemPath>
-      <itemPath>Config.c</itemPath>
+      <itemPath>../Config.c</itemPath>
+      <itemPath>../Main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -36,13 +32,14 @@
     <Elem>C:\Users\craigc\Dropbox\Local Code\Personal Projects\FanController\Firmware\Dynamic Fan Control.X\../../../Personal Libraries/Pins</Elem>
     <Elem>C:\Users\craigc\Dropbox\Local Code\Personal Projects\FanController\Firmware\Dynamic Fan Control.X\../../../Personal Libraries/Timers/Firmware</Elem>
     <Elem>C:/Users/craigc/Dropbox/Local Code/Personal Projects/FanController/Firmware/Dynamic Fan Control.X</Elem>
+    <Elem>..</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC24F08KL200</targetDevice>
+        <targetDevice>PIC24F16KA101</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>ICD3PlatformTool</platformTool>
@@ -57,6 +54,7 @@
         </linkerTool>
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
       </compileType>
@@ -84,7 +82,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="extra-include-directories"
-                  value="..\..\..\Libraries\A2D;..\..\..\Libraries\I2C;..\..\..\Libraries\Pins;..\..\..\Libraries\Timers\Firmware;C:\Users\craigc\Dropbox\Local Code\Personal Projects\FanController\Firmware\Dynamic Fan Control.X"/>
+                  value="..\..\..\Libraries\A2D;..\..\..\Libraries\I2C;..\..\..\Libraries\Pins;..\..\..\Libraries\Timers\Firmware;C:\Users\craigc\Dropbox\Local Code\Personal Projects\FanController\Firmware\Dynamic Fan Control.X;..\"/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>
@@ -109,6 +107,9 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
       </C30>
+      <C30-AR>
+        <property key="additional-options-chop-files" value="false"/>
+      </C30-AR>
       <C30-AS>
         <property key="assembler-symbols" value=""/>
         <property key="expand-macros" value="false"/>
@@ -140,11 +141,19 @@
         <property key="enable-handles" value="true"/>
         <property key="enable-pack-data" value="true"/>
         <property key="extra-lib-directories" value=""/>
+        <property key="fill-flash-options-addr" value=""/>
+        <property key="fill-flash-options-const" value=""/>
+        <property key="fill-flash-options-how" value="0"/>
+        <property key="fill-flash-options-inc-const" value="1"/>
+        <property key="fill-flash-options-increment" value=""/>
+        <property key="fill-flash-options-seq" value=""/>
+        <property key="fill-flash-options-what" value="0"/>
         <property key="general-code-protect" value="no_code_protect"/>
         <property key="general-write-protect" value="no_write_protect"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
+        <property key="linker-stack" value="true"/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
         <property key="oXC16ld-extra-opts" value=""/>
@@ -171,6 +180,7 @@
         <property key="legacy-libc" value="false"/>
         <property key="oXC16glb-macros" value=""/>
         <property key="output-file-format" value="elf"/>
+        <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
       </C30Global>
       <ICD3PlatformTool>
@@ -179,13 +189,22 @@
         <property key="CLOCK CONTROL LVDCON" value="true"/>
         <property key="CLOCK CONTROL REFOCON" value="true"/>
         <property key="COMPARATOR" value="true"/>
+        <property key="CRC" value="true"/>
+        <property key="CTMU" value="true"/>
         <property key="Freeze All Other Peripherals" value="true"/>
+        <property key="I2C1" value="true"/>
+        <property key="INPUT CAPTURE 1" value="true"/>
+        <property key="OUTPUT COMPARE 1" value="true"/>
+        <property key="SPI 1" value="true"/>
         <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
         <property key="TIMER1" value="true"/>
+        <property key="TIMER2" value="true"/>
+        <property key="TIMER3" value="true"/>
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART 1" value="true"/>
+        <property key="UART 2" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -197,7 +216,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x15ff"/>
         <property key="memories.programmemory.start" value="0x0"/>
-        <property key="poweroptions.powerenable" value="false"/>
+        <property key="poweroptions.powerenable" value="true"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveprogramrange" value="false"/>

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Dynamic Fan Control.X
+PROJECTNAME=Fan Control.X
 
 # Active Configuration
 DEFAULTCONF=default
